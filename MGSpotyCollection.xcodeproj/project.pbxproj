@@ -12,13 +12,13 @@
 		CB6BEEEC1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEDF1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.h */; };
 		CB6BEEED1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE01C4DFE8500020AA1 /* UIImageView+LBBlurredImage.m */; };
 		CB6BEEEE1C4DFE8500020AA1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEEE11C4DFE8500020AA1 /* Info.plist */; };
-		CB6BEEEF1C4DFE8500020AA1 /* MGSpotyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE21C4DFE8500020AA1 /* MGSpotyCollection.h */; };
+		CB6BEEEF1C4DFE8500020AA1 /* MGSpotyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE21C4DFE8500020AA1 /* MGSpotyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6BEEF01C4DFE8500020AA1 /* MGSpotyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE31C4DFE8500020AA1 /* MGSpotyCollection.m */; };
-		CB6BEEF11C4DFE8500020AA1 /* MGSpotyCollectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE41C4DFE8500020AA1 /* MGSpotyCollectionDataSource.h */; };
-		CB6BEEF21C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE51C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h */; };
-		CB6BEEF31C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE61C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h */; };
+		CB6BEEF11C4DFE8500020AA1 /* MGSpotyCollectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE41C4DFE8500020AA1 /* MGSpotyCollectionDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6BEEF21C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE51C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6BEEF31C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE61C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6BEEF41C4DFE8500020AA1 /* MGSpotyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE71C4DFE8500020AA1 /* MGSpotyCollectionViewCell.m */; };
-		CB6BEEF51C4DFE8500020AA1 /* MGSpotyCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE81C4DFE8500020AA1 /* MGSpotyCollectionViewController.h */; };
+		CB6BEEF51C4DFE8500020AA1 /* MGSpotyCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE81C4DFE8500020AA1 /* MGSpotyCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6BEEF61C4DFE8500020AA1 /* MGSpotyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE91C4DFE8500020AA1 /* MGSpotyCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -101,13 +101,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6BEEF51C4DFE8500020AA1 /* MGSpotyCollectionViewController.h in Headers */,
 				CB6BEEEF1C4DFE8500020AA1 /* MGSpotyCollection.h in Headers */,
+				CB6BEEF21C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h in Headers */,
+				CB6BEEF51C4DFE8500020AA1 /* MGSpotyCollectionViewController.h in Headers */,
 				CB6BEEF11C4DFE8500020AA1 /* MGSpotyCollectionDataSource.h in Headers */,
+				CB6BEEF31C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h in Headers */,
 				CB6BEEEC1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.h in Headers */,
 				CB6BEEEA1C4DFE8500020AA1 /* UIImage+ImageEffects.h in Headers */,
-				CB6BEEF21C4DFE8500020AA1 /* MGSpotyCollectionDelegate.h in Headers */,
-				CB6BEEF31C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
