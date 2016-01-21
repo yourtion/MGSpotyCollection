@@ -9,6 +9,7 @@
 #import "MGViewController.h"
 #import "MGViewControllerDataSource.h"
 #import "MGViewControllerDelegate.h"
+#import "MGSpotyCollectionViewCell.h"
 
 @interface MGViewController ()
 
@@ -23,7 +24,7 @@
 
 - (instancetype)initWithMainImage:(UIImage *)image
 {
-    self = [super initWithMainImage:image]; //or MGSpotyViewTableScrollingTypeOver
+    self = [super initWithMainImage:image andIconCount:9]; //or MGSpotyViewTableScrollingTypeOver
     if (self) {
         dataSource_ = [MGViewControllerDataSource new];
         delegate_ = [MGViewControllerDelegate new];
@@ -37,7 +38,7 @@
     
     self.dataSource = dataSource_;
     self.delegate = delegate_;
-    
+    [self registerCellClass:[MGSpotyCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     [self setOverView:self.myOverView];
 }
 

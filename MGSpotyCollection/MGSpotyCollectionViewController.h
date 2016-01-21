@@ -49,7 +49,7 @@ extern CGFloat const kMGOffsetBlurEffect;
  *
  *  @return MGSpotyViewController
  */
-- (instancetype)initWithMainImage:(UIImage *)image;
+- (instancetype)initWithMainImage:(UIImage *)image andIconCount:(int)count;
 
 /**
  *  Set an UIImage for the mainImageView

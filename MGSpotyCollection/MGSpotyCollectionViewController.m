@@ -28,22 +28,22 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     CGPoint lastContentOffsetBlurEffect_;
     UIImage *image_;
     NSOperationQueue *operationQueue_;
+    int iconCount;
 }
 
 
 #pragma mark - Life cycle
 
-- (instancetype)initWithMainImage:(UIImage *)image
+- (instancetype)initWithMainImage:(UIImage *)image andIconCount:(int)count
 {
     if(self = [super init]) {
         image_ = [image copy];
+        iconCount = count;
         
         _mainImageView = [UIImageView new];
         _mainImageView.image = image_;
         
         _overView = [UIView new];
-        
-        
         
         operationQueue_ = [[NSOperationQueue alloc]init];
         operationQueue_.maxConcurrentOperationCount = 1;
@@ -76,7 +76,6 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     flowLayout.itemSize = CGSizeMake(120, 150);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     _collectionView = [[UICollectionView alloc]initWithFrame:view.frame collectionViewLayout:flowLayout];
-    [_collectionView registerClass:[MGSpotyCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     _collectionView.frame = view.frame;
     _collectionView.showsVerticalScrollIndicator = NO;
@@ -138,7 +137,6 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 
 - (void)registerCellClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier
 {
-//    [_collectionView registerClass:cellClass forCellReuseIdentifier:identifier];
     [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
 }
 
@@ -258,7 +256,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
         return [self.dataSource numberOfSectionsInSpotyViewController:self];
     }
     
-    return 9;
+    return iconCount;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
