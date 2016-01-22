@@ -7,8 +7,7 @@
 //
 
 #import "MGViewController.h"
-#import "MGViewControllerDataSource.h"
-#import "MGViewControllerDelegate.h"
+#import "MGSpotyCollection.h"
 #import "MGSpotyCollectionViewCell.h"
 
 @interface MGViewController ()
@@ -18,16 +17,13 @@
 
 
 @implementation MGViewController {
-    MGViewControllerDelegate *delegate_;
-    MGViewControllerDataSource *dataSource_;
 }
 
 - (instancetype)initWithMainImage:(UIImage *)image
 {
     self = [super initWithMainImage:image andIconCount:9]; //or MGSpotyViewTableScrollingTypeOver
     if (self) {
-        dataSource_ = [MGViewControllerDataSource new];
-        delegate_ = [MGViewControllerDelegate new];
+        
     }
     return self;
 }
@@ -35,9 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.dataSource = dataSource_;
-    self.delegate = delegate_;
     [self registerCellClass:[MGSpotyCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     [self setOverView:self.myOverView];
 }
@@ -119,6 +112,10 @@
     [itemsContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView(90)]-10-[lblTitle]-10-[btContact(30)]|" options:0 metrics:nil views:items]];
 }
 
+-(void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index{
+    NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld", index];
+    [[[UIAlertView alloc] initWithTitle:@"Cell" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
 
 #pragma mark - Action
 

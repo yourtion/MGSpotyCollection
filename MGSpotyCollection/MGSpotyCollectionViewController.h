@@ -8,9 +8,7 @@
 
 @import UIKit;
 
-#import "MGSpotyCollectionDataSource.h"
-#import "MGSpotyCollectionDelegate.h"
-
+#import "MGSpotyCollection.h"
 
 extern CGFloat const kMGOffsetEffects;
 extern CGFloat const kMGOffsetBlurEffect;
@@ -31,16 +29,6 @@ extern CGFloat const kMGOffsetBlurEffect;
  *  Main image view
  */
 @property (nonatomic, strong) UIImageView *mainImageView;
-
-/**
- *  The MGSpotyViewController dataSource. This protocol wraps the tableview datasource
- */
-@property (nonatomic, weak) id <MGSpotyCollectionDataSource> dataSource;
-
-/**
- *  The MGSpotyViewController delegate. This protocol wraps the tableview delegate
- */
-@property (nonatomic, weak) id <MGSpotyCollectionDelegate> delegate;
 
 /**
  *  Initialize method for MGSpotyViewController
@@ -65,5 +53,7 @@ extern CGFloat const kMGOffsetBlurEffect;
  *  @param identifier cell isdentifier
  */
 - (void)registerCellClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
+
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index;
 
 @end

@@ -18,8 +18,6 @@
 		CBB748151C4E080900488FB7 /* MGSpotyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */; };
 		CBB748161C4E080900488FB7 /* MGSpotyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */; };
 		CBB748171C4E080900488FB7 /* MGSpotyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */; };
-		CBB7481D1C4E092700488FB7 /* MGViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7481A1C4E092700488FB7 /* MGViewControllerDataSource.m */; };
-		CBB7481E1C4E092700488FB7 /* MGViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7481C1C4E092700488FB7 /* MGViewControllerDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,16 +37,10 @@
 		CBB748091C4E080900488FB7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollection.h; sourceTree = "<group>"; };
 		CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollection.m; sourceTree = "<group>"; };
-		CBB7480C1C4E080900488FB7 /* MGSpotyCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionDataSource.h; sourceTree = "<group>"; };
-		CBB7480D1C4E080900488FB7 /* MGSpotyCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionDelegate.h; sourceTree = "<group>"; };
 		CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionViewCell.h; sourceTree = "<group>"; };
 		CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollectionViewCell.m; sourceTree = "<group>"; };
 		CBB748101C4E080900488FB7 /* MGSpotyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionViewController.h; sourceTree = "<group>"; };
 		CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollectionViewController.m; sourceTree = "<group>"; };
-		CBB748191C4E092700488FB7 /* MGViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewControllerDataSource.h; sourceTree = "<group>"; };
-		CBB7481A1C4E092700488FB7 /* MGViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewControllerDataSource.m; sourceTree = "<group>"; };
-		CBB7481B1C4E092700488FB7 /* MGViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewControllerDelegate.h; sourceTree = "<group>"; };
-		CBB7481C1C4E092700488FB7 /* MGViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewControllerDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +74,6 @@
 		CB6BEF021C4DFF8300020AA1 /* MGSpotyCollectionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CBB748181C4E092200488FB7 /* DataSource & Delegate */,
 				CB6BEF061C4DFF8300020AA1 /* AppDelegate.h */,
 				CB6BEF071C4DFF8300020AA1 /* AppDelegate.m */,
 				CB6BEF3C1C4E05EF00020AA1 /* MGViewController.h */,
@@ -110,8 +101,6 @@
 				CBB748091C4E080900488FB7 /* Info.plist */,
 				CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */,
 				CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */,
-				CBB7480C1C4E080900488FB7 /* MGSpotyCollectionDataSource.h */,
-				CBB7480D1C4E080900488FB7 /* MGSpotyCollectionDelegate.h */,
 				CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */,
 				CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */,
 				CBB748101C4E080900488FB7 /* MGSpotyCollectionViewController.h */,
@@ -129,17 +118,6 @@
 				CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */,
 			);
 			path = ImageEffects;
-			sourceTree = "<group>";
-		};
-		CBB748181C4E092200488FB7 /* DataSource & Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				CBB748191C4E092700488FB7 /* MGViewControllerDataSource.h */,
-				CBB7481A1C4E092700488FB7 /* MGViewControllerDataSource.m */,
-				CBB7481B1C4E092700488FB7 /* MGViewControllerDelegate.h */,
-				CBB7481C1C4E092700488FB7 /* MGViewControllerDelegate.m */,
-			);
-			name = "DataSource & Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +195,7 @@
 				CBB748131C4E080900488FB7 /* UIImageView+LBBlurredImage.m in Sources */,
 				CBB748151C4E080900488FB7 /* MGSpotyCollection.m in Sources */,
 				CB6BEF081C4DFF8300020AA1 /* AppDelegate.m in Sources */,
-				CBB7481E1C4E092700488FB7 /* MGViewControllerDelegate.m in Sources */,
 				CB6BEF051C4DFF8300020AA1 /* main.m in Sources */,
-				CBB7481D1C4E092700488FB7 /* MGViewControllerDataSource.m in Sources */,
 				CBB748171C4E080900488FB7 /* MGSpotyCollectionViewController.m in Sources */,
 				CBB748161C4E080900488FB7 /* MGSpotyCollectionViewCell.m in Sources */,
 			);

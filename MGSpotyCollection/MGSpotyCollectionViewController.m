@@ -29,6 +29,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     UIImage *image_;
     NSOperationQueue *operationQueue_;
     int iconCount;
+    CGFloat cellWidth;
 }
 
 
@@ -39,6 +40,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     if(self = [super init]) {
         image_ = [image copy];
         iconCount = count;
+        cellWidth = 125;
         
         _mainImageView = [UIImageView new];
         _mainImageView.image = image_;
@@ -71,9 +73,8 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     _overView.backgroundColor = [UIColor clearColor];
     [view addSubview:_overView];
     
-    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(120, 150);
+    flowLayout.itemSize = CGSizeMake(cellWidth, 150);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     _collectionView = [[UICollectionView alloc]initWithFrame:view.frame collectionViewLayout:flowLayout];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
@@ -252,10 +253,6 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if ([self.dataSource respondsToSelector:@selector(numberOfSectionsInSpotyViewController:)]) {
-        return [self.dataSource numberOfSectionsInSpotyViewController:self];
-    }
-    
     return iconCount;
 }
 
@@ -265,7 +262,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     MGSpotyCollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     if(!cell) {
-        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, 120, 150)];
+        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, 150)];
         cell.backgroundColor = [UIColor darkGrayColor];
     }
     return cell;
@@ -273,12 +270,18 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 
 
 
-#pragma mark - UITableViewDelegate
+#pragma mark - CollectionDelegate
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self respondsToSelector:@selector(collectionView:didSelectItemAtIndex:)]) {
+        return [self collectionView:self didSelectItemAtIndex:indexPath.row];
+    }
+}
 
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(120, 150);
+    return CGSizeMake(cellWidth, 150);
 }
 
 //header的size
@@ -287,25 +290,17 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     return self.overView.frame.size;
 }
 
-//设置每个item的UIEdgeInsets
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(2, 2, 2, 2);
-}
-
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0;
 }
 
-
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0;
 }
-
 
 //通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath

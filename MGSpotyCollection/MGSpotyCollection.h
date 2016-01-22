@@ -8,7 +8,6 @@
 
 @import UIKit;
 
-
 @interface MGSpotyCollection : UIView
 
 @property (nonatomic, weak) UIView *overview;
