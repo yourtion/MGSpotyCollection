@@ -8,9 +8,8 @@
 
 #import "MGViewController.h"
 #import "MGSpotyCollection.h"
-#import "MGSpotyCollectionViewCell.h"
 
-@interface MGViewController ()
+@interface MGViewController ()<MGSpotyCollectionDelegate>
 
 @end
 
@@ -31,8 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self registerCellClass:[MGSpotyCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     [self setOverView:self.myOverView];
+    self.delegate = self;
 }
 
 - (UIView *)myOverView
@@ -115,6 +114,11 @@
 -(void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index{
     NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld", index];
     [[[UIAlertView alloc] initWithTitle:@"Cell" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell {
+    cell.iconImage.image = [UIImage imageNamed:@"example"];
+    cell.textLable.text = @"XXXX";
 }
 
 #pragma mark - Action

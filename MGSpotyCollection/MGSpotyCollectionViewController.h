@@ -14,6 +14,17 @@
 extern CGFloat const kMGOffsetEffects;
 extern CGFloat const kMGOffsetBlurEffect;
 
+@class MGSpotyCollectionViewController;
+
+@protocol MGSpotyCollectionDelegate<NSObject>
+
+@optional
+
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index;
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell;
+
+@end
+
 @interface MGSpotyCollectionViewController : UIViewController
 
 /**
@@ -47,14 +58,14 @@ extern CGFloat const kMGOffsetBlurEffect;
  */
 - (void)setMainImage:(UIImage *)image;
 
-/**
- *  Register class for the tableview
- *
- *  @param cellClass  cell class
- *  @param identifier cell isdentifier
- */
-- (void)registerCellClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
+///**
+// *  Register class for the tableview
+// *
+// *  @param cellClass  cell class
+// *  @param identifier cell isdentifier
+// */
+//- (void)registerCellClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
 
-- (void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index;
+@property(nonatomic, weak)id<MGSpotyCollectionDelegate> delegate;
 
 @end

@@ -16,32 +16,30 @@
     if (self)
     {
         _iconImage  = [[UIImageView alloc] init];
-        _iconImage.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:_iconImage];
         [_iconImage setTranslatesAutoresizingMaskIntoConstraints:NO];
-        
+
         _textLable = [[UILabel alloc] init];
         _textLable.textAlignment = NSTextAlignmentCenter;
-        _textLable.textColor = [UIColor blueColor];
+        _textLable.textColor = [UIColor darkGrayColor];
         _textLable.font = [UIFont systemFontOfSize:15];
-        _textLable.backgroundColor = [UIColor purpleColor];
         [self.contentView addSubview:_textLable];
         [_textLable setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         self.backgroundColor = [UIColor whiteColor];
 
         NSLayoutConstraint *constrant1i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
-        NSLayoutConstraint *constrant2i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-20.0];
-        NSLayoutConstraint *constrant3i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
-        NSLayoutConstraint *constrant4i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
+        NSLayoutConstraint *constrant2i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-10.0];
+        NSLayoutConstraint *constrant3i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
+        NSLayoutConstraint *constrant4i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
         NSLayoutConstraint *constrant1t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
         NSLayoutConstraint *constrant2t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:45.0];
-        NSLayoutConstraint *constrant3t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
-        NSLayoutConstraint *constrant4t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:30.0];
-        
+        NSLayoutConstraint *constrant3t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
+        NSLayoutConstraint *constrant4t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:25.0];
+
         NSArray *constrantArray = @[constrant1i,constrant2i,constrant3i,constrant4i,constrant1t,constrant2t,constrant3t,constrant4t];
         [self addConstraints:constrantArray];
-
+        
     }
     
     return self;

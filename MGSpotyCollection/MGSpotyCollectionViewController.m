@@ -59,7 +59,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     //Create the view
     MGSpotyCollection *view = [[MGSpotyCollection alloc] initWithFrame:[UIScreen mainScreen].bounds];
     view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    view.backgroundColor = [UIColor grayColor];
+    view.backgroundColor = [UIColor whiteColor];
     
     //Configure the view
     CGFloat viewWidth = CGRectGetWidth(view.frame);
@@ -78,6 +78,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     _collectionView = [[UICollectionView alloc]initWithFrame:view.frame collectionViewLayout:flowLayout];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+    [_collectionView registerClass:[MGSpotyCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     _collectionView.frame = view.frame;
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.backgroundColor = [UIColor clearColor];
@@ -265,7 +266,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
         });
     } else {
         _overView.frame = (CGRect){ 0.0, -absoluteY, overviewWidth, overviewHeight };
-        _mainImageView.frame = (CGRect){ 0.0, -absoluteY, overviewWidth, overviewHeight };
+//        _mainImageView.frame = (CGRect){ 0.0, -absoluteY, overviewWidth, overviewHeight };
     }
 }
 
@@ -282,8 +283,10 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     MGSpotyCollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     if(!cell) {
-        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, 150)];
-//        cell.backgroundColor = [UIColor whiteColor];
+        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, 130)];
+    }
+    if ([self respondsToSelector:@selector(collectionView:setIconAndTitleForCell:)]) {
+        [self.delegate collectionView:self setIconAndTitleForCell:cell];
     }
     return cell;
 }
@@ -294,14 +297,14 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self respondsToSelector:@selector(collectionView:didSelectItemAtIndex:)]) {
-        return [self collectionView:self didSelectItemAtIndex:indexPath.row];
+        return [self.delegate collectionView:self didSelectItemAtIndex:indexPath.row];
     }
 }
 
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(cellWidth, 140);
+    return CGSizeMake(cellWidth, 130);
 }
 
 //header的size
