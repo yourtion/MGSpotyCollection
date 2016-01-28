@@ -14,7 +14,6 @@
 		CB6BEF3E1C4E05EF00020AA1 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */; };
 		CBB748121C4E080900488FB7 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748061C4E080900488FB7 /* UIImage+ImageEffects.m */; };
 		CBB748131C4E080900488FB7 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */; };
-		CBB748141C4E080900488FB7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBB748091C4E080900488FB7 /* Info.plist */; };
 		CBB748151C4E080900488FB7 /* MGSpotyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */; };
 		CBB748161C4E080900488FB7 /* MGSpotyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */; };
 		CBB748171C4E080900488FB7 /* MGSpotyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */; };
@@ -34,7 +33,6 @@
 		CBB748061C4E080900488FB7 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		CBB748071C4E080900488FB7 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
 		CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
-		CBB748091C4E080900488FB7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollection.h; sourceTree = "<group>"; };
 		CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollection.m; sourceTree = "<group>"; };
 		CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionViewCell.h; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				CBB748041C4E080900488FB7 /* ImageEffects */,
-				CBB748091C4E080900488FB7 /* Info.plist */,
 				CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */,
 				CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */,
 				CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */,
@@ -179,7 +176,6 @@
 			files = (
 				CB6BEF131C4DFF8300020AA1 /* LaunchScreen.storyboard in Resources */,
 				CB6BEF101C4DFF8300020AA1 /* Assets.xcassets in Resources */,
-				CBB748141C4E080900488FB7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
