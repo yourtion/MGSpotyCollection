@@ -30,8 +30,8 @@
 
         NSLayoutConstraint *constrant1i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
         NSLayoutConstraint *constrant2i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-10.0];
-        NSLayoutConstraint *constrant3i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
-        NSLayoutConstraint *constrant4i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];
+        NSLayoutConstraint *constrant3i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:60.0];
+        NSLayoutConstraint *constrant4i = [NSLayoutConstraint constraintWithItem:_iconImage attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:60.0];
         NSLayoutConstraint *constrant1t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
         NSLayoutConstraint *constrant2t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:45.0];
         NSLayoutConstraint *constrant3t = [NSLayoutConstraint constraintWithItem:_textLable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:80.0];

@@ -285,8 +285,8 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     if(!cell) {
         cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, 130)];
     }
-    if ([self respondsToSelector:@selector(collectionView:setIconAndTitleForCell:)]) {
-        [self.delegate collectionView:self setIconAndTitleForCell:cell];
+    if ([self respondsToSelector:@selector(collectionView:setIconAndTitleForCell:atIndex:)]) {
+        [self.delegate collectionView:self setIconAndTitleForCell:cell atIndex:indexPath.row];
     }
     return cell;
 }

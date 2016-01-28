@@ -21,7 +21,7 @@ extern CGFloat const kMGOffsetBlurEffect;
 @optional
 
 - (void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index;
-- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell;
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell atIndex:(NSInteger)index;
 
 @end
 

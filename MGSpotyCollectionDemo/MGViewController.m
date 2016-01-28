@@ -9,7 +9,10 @@
 #import "MGViewController.h"
 #import "MGSpotyCollection.h"
 
-@interface MGViewController ()<MGSpotyCollectionDelegate>
+@interface MGViewController ()<MGSpotyCollectionDelegate> {
+    NSArray *_iconArray;
+    NSArray *_titleArray;
+}
 
 @end
 
@@ -32,6 +35,8 @@
     [super viewDidLoad];
     [self setOverView:self.myOverView];
     self.delegate = self;
+    _iconArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"1",@"2",@"3",@"4",@"5",@"6"];
+    _titleArray = @[@"Edit",@"Profile",@"Info",@"Mesage",@"Note",@"VIP",@"编辑",@"简介",@"信息",@"对话",@"备注",@"会员"];
 }
 
 - (UIView *)myOverView
@@ -112,13 +117,27 @@
 }
 
 -(void)collectionView:(MGSpotyCollectionViewController *)viewController didSelectItemAtIndex:(NSInteger)index{
-    NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld", index];
+    NSString *title = @"Unknow";
+    if (index < _iconArray.count && index < _titleArray.count) {
+        title = _titleArray[index];
+    }
+    NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld -%@", index, title];
     [[[UIAlertView alloc] initWithTitle:@"Cell" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
-- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell {
-    cell.iconImage.image = [UIImage imageNamed:@"example"];
-    cell.textLable.text = @"XXXX";
+- (void)collectionView:(MGSpotyCollectionViewController *)viewController setIconAndTitleForCell:(MGSpotyCollectionViewCell *)cell atIndex:(NSInteger)index{
+
+    if (index < _iconArray.count && index < _titleArray.count) {
+        UIImage *image = [UIImage imageNamed:_iconArray[index]];
+        NSString *title = _titleArray[index];
+        if(image && title) {
+            cell.iconImage.image = image;
+            cell.textLable.text = title;
+        }
+    } else {
+        cell.iconImage.image = [UIImage imageNamed:@"example"];
+        cell.textLable.text = @"Unknow";
+    }
 }
 
 #pragma mark - Action
