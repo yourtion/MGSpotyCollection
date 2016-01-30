@@ -68,4 +68,16 @@
     border.backgroundColor = borderColor.CGColor;
     return border;
 }
+
+-(void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    if (highlighted) {
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    } else {
+        [UIView animateWithDuration:0.25f animations:^{} completion:^(BOOL finished) {
+            self.backgroundColor = [UIColor whiteColor];
+        }];
+    }
+}
+
 @end
