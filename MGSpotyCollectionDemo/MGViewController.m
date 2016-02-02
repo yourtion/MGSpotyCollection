@@ -121,7 +121,7 @@
     if (index < _iconArray.count && index < _titleArray.count) {
         title = _titleArray[index];
     }
-    NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld -%@", index, title];
+    NSString *msg = [NSString stringWithFormat:@"Pressed Cell - %ld -%@", (long)index, title];
     [[[UIAlertView alloc] initWithTitle:@"Cell" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
