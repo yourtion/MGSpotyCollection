@@ -15,7 +15,7 @@ CGFloat const kMGOffsetEffects = 40.0;
 CGFloat const kMGOffsetBlurEffect = 2.0;
 
 static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
-
+static const CGFloat kMGCellHeight = 130.f;
 
 @interface MGSpotyCollectionViewController () <UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -30,6 +30,8 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     int iconCount;
     CGFloat cellWidth;
     UICollectionReusableView *headerView_;
+    
+    UIView *bgView_;
 }
 
 
@@ -40,8 +42,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     if(self = [super init]) {
         image_ = [image copy];
         iconCount = count;
-        cellWidth = 125;
-        
+
         _mainImageView = [UIImageView new];
         _mainImageView.image = image_;
         
@@ -73,6 +74,10 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     _overView.backgroundColor = [UIColor clearColor];
     [view addSubview:_overView];
     
+    bgView_ = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    bgView_.backgroundColor = [UIColor whiteColor];
+    [view addSubview:bgView_];
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(cellWidth, 140);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -85,7 +90,10 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     _collectionView.backgroundView = nil;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+    cellWidth = [[UIScreen mainScreen] bounds].size.width/3.f;
+    
     [view addSubview:_collectionView];
+    
     
     startContentOffset_ = _collectionView.contentOffset;
     lastContentOffsetBlurEffect_ = startContentOffset_;
@@ -189,20 +197,14 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     lastContentOffsetBlurEffect_ = startContentOffset_;
     
     [_collectionView performBatchUpdates:^{
-//        NSLog(@"update");
-                headerView_.frame =rect ;
+        headerView_.frame =rect;
         if (size.width > size.height) {
             cellWidth = (size.width-1)/6.f;
-            _collectionView.contentInset = UIEdgeInsetsMake(0, 0.5, 0, 0.5);
         } else {
             cellWidth = size.width/3.f;
             _collectionView.contentInset = UIEdgeInsetsZero;
-
         }
-        NSLog(@"%f",cellWidth);
-    } completion:^(BOOL finished) {
-//        NSLog(@"update Done");
-    }];
+    } completion:nil];
 }
 
 
@@ -212,8 +214,11 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
                                 duration:(NSTimeInterval)duration
 {
     [self mg_didRotateToSize:(CGSize){ CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds) }];
-    
+}
 
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+   
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size
@@ -228,6 +233,11 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    // update background view origin Y
+    CGRect frame = bgView_.frame;
+    frame.origin.y = _mainImageView.bounds.size.height - scrollView.contentOffset.y;
+    bgView_.frame = frame;
+    
     //Image size effects
     CGFloat absoluteY = ABS(scrollView.contentOffset.y);
     CGFloat overviewWidth = CGRectGetWidth(_overView.frame);
@@ -271,9 +281,16 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 }
 
 
-#pragma mark - UITableViewDataSource
+#pragma mark - UICollectionViewDataSource
+
+- (CGFloat)getCollectionCellSize {
+    CGFloat width = [[UIScreen mainScreen] bounds].size.width / 3;
+
+    return width;
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    bgView_.frame = CGRectMake(0, _mainImageView.bounds.size.height, _mainImageView.bounds.size.width, kMGCellHeight*iconCount);
     return iconCount;
 }
 
@@ -283,7 +300,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     MGSpotyCollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     if(!cell) {
-        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, 130)];
+        cell = [[MGSpotyCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, cellWidth, kMGCellHeight)];
     }
     if ([self respondsToSelector:@selector(collectionView:setIconAndTitleForCell:atIndex:)]) {
         [self.delegate collectionView:self setIconAndTitleForCell:cell atIndex:indexPath.row];
@@ -291,9 +308,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     return cell;
 }
 
-
-
-#pragma mark - CollectionDelegate
+#pragma mark - UICollectionViewDelegate
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self respondsToSelector:@selector(collectionView:didSelectItemAtIndex:)]) {
@@ -304,7 +319,7 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(cellWidth, 130);
+    return CGSizeMake(cellWidth, kMGCellHeight);
 }
 
 //header的size
@@ -328,19 +343,17 @@ static const CGFloat kMGMaxPercentageOverviewHeightInScreen = 0.60f;
     return 0;
 }
 
-//通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
+//通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，都为 “reusableView”
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (headerView_) {
         return headerView_;
     }
     UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-    headerView.backgroundColor =[UIColor clearColor];
-    headerView.frame =self.overView.bounds ;
+    headerView.backgroundColor = [UIColor clearColor];
+    headerView.frame = self.overView.bounds ;
     headerView_ = headerView;
     return headerView_;
 }
-
-
 
 @end
