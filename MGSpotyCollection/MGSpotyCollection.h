@@ -6,6 +6,9 @@
 //  Copyright © 2016 Yourtion. All rights reserved.
 //
 
+#import "MGSpotyCollectionViewCell.h"
+#import "MGSpotyCollectionViewController.h"
+
 @import UIKit;
 
 @interface MGSpotyCollection : UIView

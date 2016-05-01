@@ -7,7 +7,6 @@
 //
 
 #import "MGViewController.h"
-#import "MGSpotyCollection.h"
 
 @interface MGViewController ()<MGSpotyCollectionDelegate> {
     NSArray *_iconArray;
@@ -16,17 +15,11 @@
 
 @end
 
-
-
-@implementation MGViewController {
-}
+@implementation MGViewController
 
 - (instancetype)initWithMainImage:(UIImage *)image
 {
     self = [super initWithMainImage:image andIconCount:9]; //or MGSpotyViewTableScrollingTypeOver
-    if (self) {
-        
-    }
     return self;
 }
 

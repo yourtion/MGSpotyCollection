@@ -11,7 +11,6 @@
 		CB6BEEEB1C4DFE8500020AA1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEDE1C4DFE8500020AA1 /* UIImage+ImageEffects.m */; };
 		CB6BEEEC1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEDF1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.h */; };
 		CB6BEEED1C4DFE8500020AA1 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE01C4DFE8500020AA1 /* UIImageView+LBBlurredImage.m */; };
-		CB6BEEEE1C4DFE8500020AA1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEEE11C4DFE8500020AA1 /* Info.plist */; };
 		CB6BEEEF1C4DFE8500020AA1 /* MGSpotyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE21C4DFE8500020AA1 /* MGSpotyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6BEEF01C4DFE8500020AA1 /* MGSpotyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEEE31C4DFE8500020AA1 /* MGSpotyCollection.m */; };
 		CB6BEEF31C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6BEEE61C4DFE8500020AA1 /* MGSpotyCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -160,7 +159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6BEEEE1C4DFE8500020AA1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +217,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -260,7 +257,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -279,7 +275,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MGSpotyCollection/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourtion.MGSpotyCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,7 +291,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MGSpotyCollection/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourtion.MGSpotyCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";

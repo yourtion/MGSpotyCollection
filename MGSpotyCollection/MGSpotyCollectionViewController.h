@@ -9,7 +9,6 @@
 @import UIKit;
 
 #import "MGSpotyCollection.h"
-#import "MGSpotyCollectionViewCell.h"
 
 extern CGFloat const kMGOffsetEffects;
 extern CGFloat const kMGOffsetBlurEffect;

@@ -12,12 +12,46 @@
 		CB6BEF101C4DFF8300020AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF0F1C4DFF8300020AA1 /* Assets.xcassets */; };
 		CB6BEF131C4DFF8300020AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF111C4DFF8300020AA1 /* LaunchScreen.storyboard */; };
 		CB6BEF3E1C4E05EF00020AA1 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */; };
-		CBB748121C4E080900488FB7 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748061C4E080900488FB7 /* UIImage+ImageEffects.m */; };
-		CBB748131C4E080900488FB7 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */; };
-		CBB748151C4E080900488FB7 /* MGSpotyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */; };
-		CBB748161C4E080900488FB7 /* MGSpotyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */; };
-		CBB748171C4E080900488FB7 /* MGSpotyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */; };
+		CBF8AC8E1CD1C68700D0B824 /* MGSpotyCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBF8AC881CD1C4C100D0B824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB6BEEB81C4DF9A700020AA1;
+			remoteInfo = MGSpotyCollection;
+		};
+		CBF8AC8A1CD1C4CF00D0B824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CB6BEEB71C4DF9A700020AA1;
+			remoteInfo = MGSpotyCollection;
+		};
+		CBF8AC8F1CD1C68700D0B824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CB6BEEB71C4DF9A700020AA1;
+			remoteInfo = MGSpotyCollection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBF8AC911CD1C68700D0B824 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBF8AC8E1CD1C68700D0B824 /* MGSpotyCollection.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB6BEF001C4DFF8300020AA1 /* MGSpotyCollectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGSpotyCollectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,16 +63,7 @@
 		CB6BEF141C4DFF8300020AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6BEF3C1C4E05EF00020AA1 /* MGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewController.h; sourceTree = "<group>"; };
 		CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewController.m; sourceTree = "<group>"; };
-		CBB748051C4E080900488FB7 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		CBB748061C4E080900488FB7 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		CBB748071C4E080900488FB7 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
-		CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
-		CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollection.h; sourceTree = "<group>"; };
-		CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollection.m; sourceTree = "<group>"; };
-		CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionViewCell.h; sourceTree = "<group>"; };
-		CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollectionViewCell.m; sourceTree = "<group>"; };
-		CBB748101C4E080900488FB7 /* MGSpotyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSpotyCollectionViewController.h; sourceTree = "<group>"; };
-		CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSpotyCollectionViewController.m; sourceTree = "<group>"; };
+		CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MGSpotyCollection.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +80,7 @@
 		CB6BEEF71C4DFF8300020AA1 = {
 			isa = PBXGroup;
 			children = (
-				CBB748031C4E080900488FB7 /* MGSpotyCollection */,
+				CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */,
 				CB6BEF021C4DFF8300020AA1 /* MGSpotyCollectionDemo */,
 				CB6BEF011C4DFF8300020AA1 /* Products */,
 			);
@@ -92,29 +117,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CBB748031C4E080900488FB7 /* MGSpotyCollection */ = {
+		CBF8AC851CD1C4C100D0B824 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBB748041C4E080900488FB7 /* ImageEffects */,
-				CBB7480A1C4E080900488FB7 /* MGSpotyCollection.h */,
-				CBB7480B1C4E080900488FB7 /* MGSpotyCollection.m */,
-				CBB7480E1C4E080900488FB7 /* MGSpotyCollectionViewCell.h */,
-				CBB7480F1C4E080900488FB7 /* MGSpotyCollectionViewCell.m */,
-				CBB748101C4E080900488FB7 /* MGSpotyCollectionViewController.h */,
-				CBB748111C4E080900488FB7 /* MGSpotyCollectionViewController.m */,
+				CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */,
 			);
-			path = MGSpotyCollection;
-			sourceTree = "<group>";
-		};
-		CBB748041C4E080900488FB7 /* ImageEffects */ = {
-			isa = PBXGroup;
-			children = (
-				CBB748051C4E080900488FB7 /* UIImage+ImageEffects.h */,
-				CBB748061C4E080900488FB7 /* UIImage+ImageEffects.m */,
-				CBB748071C4E080900488FB7 /* UIImageView+LBBlurredImage.h */,
-				CBB748081C4E080900488FB7 /* UIImageView+LBBlurredImage.m */,
-			);
-			path = ImageEffects;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,10 +135,13 @@
 				CB6BEEFC1C4DFF8300020AA1 /* Sources */,
 				CB6BEEFE1C4DFF8300020AA1 /* Resources */,
 				CB6BEEFD1C4DFF8300020AA1 /* Frameworks */,
+				CBF8AC911CD1C68700D0B824 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CBF8AC8B1CD1C4CF00D0B824 /* PBXTargetDependency */,
+				CBF8AC901CD1C68700D0B824 /* PBXTargetDependency */,
 			);
 			name = MGSpotyCollectionDemo;
 			productName = MGSpotyCollectionDemo;
@@ -162,12 +173,28 @@
 			mainGroup = CB6BEEF71C4DFF8300020AA1;
 			productRefGroup = CB6BEF011C4DFF8300020AA1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CBF8AC851CD1C4C100D0B824 /* Products */;
+					ProjectRef = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CB6BEEFF1C4DFF8300020AA1 /* MGSpotyCollectionDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MGSpotyCollection.framework;
+			remoteRef = CBF8AC881CD1C4C100D0B824 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CB6BEEFE1C4DFF8300020AA1 /* Resources */ = {
@@ -186,18 +213,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB748121C4E080900488FB7 /* UIImage+ImageEffects.m in Sources */,
 				CB6BEF3E1C4E05EF00020AA1 /* MGViewController.m in Sources */,
-				CBB748131C4E080900488FB7 /* UIImageView+LBBlurredImage.m in Sources */,
-				CBB748151C4E080900488FB7 /* MGSpotyCollection.m in Sources */,
 				CB6BEF081C4DFF8300020AA1 /* AppDelegate.m in Sources */,
 				CB6BEF051C4DFF8300020AA1 /* main.m in Sources */,
-				CBB748171C4E080900488FB7 /* MGSpotyCollectionViewController.m in Sources */,
-				CBB748161C4E080900488FB7 /* MGSpotyCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBF8AC8B1CD1C4CF00D0B824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MGSpotyCollection;
+			targetProxy = CBF8AC8A1CD1C4CF00D0B824 /* PBXContainerItemProxy */;
+		};
+		CBF8AC901CD1C68700D0B824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MGSpotyCollection;
+			targetProxy = CBF8AC8F1CD1C68700D0B824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB6BEF111C4DFF8300020AA1 /* LaunchScreen.storyboard */ = {

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MGSpotyCollection.h"
+#import <MGSpotyCollection/MGSpotyCollection.h>
 #import "MGViewController.h"
 
 @interface AppDelegate ()

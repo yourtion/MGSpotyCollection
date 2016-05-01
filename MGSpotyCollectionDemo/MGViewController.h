@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Matteo Gobbi. All rights reserved.
 //
 
-#import "MGSpotyCollectionViewController.h"
-
+#import <MGSpotyCollection/MGSpotyCollection.h>
 
 @interface MGViewController : MGSpotyCollectionViewController
 
