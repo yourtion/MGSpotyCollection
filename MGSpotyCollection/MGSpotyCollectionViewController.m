@@ -78,6 +78,7 @@ static const CGFloat kMGCellHeight = 130.f;
     bgView_.backgroundColor = [UIColor whiteColor];
     [view addSubview:bgView_];
     
+    cellWidth = [[UIScreen mainScreen] bounds].size.width/3.f;
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(cellWidth, 140);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -90,7 +91,8 @@ static const CGFloat kMGCellHeight = 130.f;
     _collectionView.backgroundView = nil;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-    cellWidth = [[UIScreen mainScreen] bounds].size.width/3.f;
+    _collectionView.alwaysBounceVertical = YES;
+    
     
     [view addSubview:_collectionView];
     
@@ -198,7 +200,7 @@ static const CGFloat kMGCellHeight = 130.f;
     
     [_collectionView performBatchUpdates:^{
         headerView_.frame =rect;
-        if (size.width > size.height) {
+        if ((size.width > size.height) && iconCount >= 6){
             cellWidth = (size.width-1)/6.f;
         } else {
             cellWidth = size.width/3.f;

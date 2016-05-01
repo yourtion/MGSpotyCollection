@@ -17,12 +17,6 @@
 
 @implementation MGViewController
 
-- (instancetype)initWithMainImage:(UIImage *)image
-{
-    self = [super initWithMainImage:image andIconCount:9]; //or MGSpotyViewTableScrollingTypeOver
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
