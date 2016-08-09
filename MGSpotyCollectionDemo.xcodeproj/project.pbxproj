@@ -7,46 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB28982D1D507F3E005D9E6A /* MGSpotyCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */; };
+		CB28982F1D507F42005D9E6A /* MGSpotyCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6BEF051C4DFF8300020AA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF041C4DFF8300020AA1 /* main.m */; };
 		CB6BEF081C4DFF8300020AA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF071C4DFF8300020AA1 /* AppDelegate.m */; };
 		CB6BEF101C4DFF8300020AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF0F1C4DFF8300020AA1 /* Assets.xcassets */; };
 		CB6BEF131C4DFF8300020AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF111C4DFF8300020AA1 /* LaunchScreen.storyboard */; };
 		CB6BEF3E1C4E05EF00020AA1 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */; };
-		CBF8AC8E1CD1C68700D0B824 /* MGSpotyCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CBF8AC881CD1C4C100D0B824 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CB6BEEB81C4DF9A700020AA1;
-			remoteInfo = MGSpotyCollection;
-		};
-		CBF8AC8A1CD1C4CF00D0B824 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CB6BEEB71C4DF9A700020AA1;
-			remoteInfo = MGSpotyCollection;
-		};
-		CBF8AC8F1CD1C68700D0B824 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CB6BEEB71C4DF9A700020AA1;
-			remoteInfo = MGSpotyCollection;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		CBF8AC911CD1C68700D0B824 /* Embed Frameworks */ = {
+		CB2898301D507F42005D9E6A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CBF8AC8E1CD1C68700D0B824 /* MGSpotyCollection.framework in Embed Frameworks */,
+				CB28982F1D507F42005D9E6A /* MGSpotyCollection.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSpotyCollection.framework; path = "../../../Library/Developer/Xcode/DerivedData/MGSpotyCollection-fhjelkeebdzgivgfzmauopuvaytg/Build/Products/Debug-iphonesimulator/MGSpotyCollection.framework"; sourceTree = "<group>"; };
 		CB6BEF001C4DFF8300020AA1 /* MGSpotyCollectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGSpotyCollectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BEF041C4DFF8300020AA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB6BEF061C4DFF8300020AA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +41,6 @@
 		CB6BEF141C4DFF8300020AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6BEF3C1C4E05EF00020AA1 /* MGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewController.h; sourceTree = "<group>"; };
 		CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewController.m; sourceTree = "<group>"; };
-		CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MGSpotyCollection.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB28982D1D507F3E005D9E6A /* MGSpotyCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +58,7 @@
 		CB6BEEF71C4DFF8300020AA1 = {
 			isa = PBXGroup;
 			children = (
-				CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */,
+				CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */,
 				CB6BEF021C4DFF8300020AA1 /* MGSpotyCollectionDemo */,
 				CB6BEF011C4DFF8300020AA1 /* Products */,
 			);
@@ -117,14 +95,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CBF8AC851CD1C4C100D0B824 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,13 +105,11 @@
 				CB6BEEFC1C4DFF8300020AA1 /* Sources */,
 				CB6BEEFE1C4DFF8300020AA1 /* Resources */,
 				CB6BEEFD1C4DFF8300020AA1 /* Frameworks */,
-				CBF8AC911CD1C68700D0B824 /* Embed Frameworks */,
+				CB2898301D507F42005D9E6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CBF8AC8B1CD1C4CF00D0B824 /* PBXTargetDependency */,
-				CBF8AC901CD1C68700D0B824 /* PBXTargetDependency */,
 			);
 			name = MGSpotyCollectionDemo;
 			productName = MGSpotyCollectionDemo;
@@ -173,28 +141,12 @@
 			mainGroup = CB6BEEF71C4DFF8300020AA1;
 			productRefGroup = CB6BEF011C4DFF8300020AA1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CBF8AC851CD1C4C100D0B824 /* Products */;
-					ProjectRef = CBF8AC841CD1C4C100D0B824 /* MGSpotyCollection.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CB6BEEFF1C4DFF8300020AA1 /* MGSpotyCollectionDemo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CBF8AC891CD1C4C100D0B824 /* MGSpotyCollection.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MGSpotyCollection.framework;
-			remoteRef = CBF8AC881CD1C4C100D0B824 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CB6BEEFE1C4DFF8300020AA1 /* Resources */ = {
@@ -220,19 +172,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CBF8AC8B1CD1C4CF00D0B824 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MGSpotyCollection;
-			targetProxy = CBF8AC8A1CD1C4CF00D0B824 /* PBXContainerItemProxy */;
-		};
-		CBF8AC901CD1C68700D0B824 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MGSpotyCollection;
-			targetProxy = CBF8AC8F1CD1C68700D0B824 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB6BEF111C4DFF8300020AA1 /* LaunchScreen.storyboard */ = {
@@ -330,6 +269,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = MGSpotyCollectionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -342,6 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = MGSpotyCollectionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -54,7 +54,7 @@
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     [imageView setContentMode:UIViewContentModeScaleAspectFill];
     [imageView setClipsToBounds:YES];
-    [imageView setImage:[UIImage imageNamed:@"example"]];
+    [imageView setImage:[UIImage imageNamed:@"yourtion"]];
     [imageView.layer setBorderColor:[UIColor whiteColor].CGColor];
     [imageView.layer setBorderWidth:2.0];
     [imageView.layer setCornerRadius:45.0];
@@ -69,7 +69,7 @@
     //Add an example label
     UILabel *lblTitle = [UILabel new];
     lblTitle.translatesAutoresizingMaskIntoConstraints = NO;
-    [lblTitle setText:@"Name Surname"];
+    [lblTitle setText:@"Yourtion Guo"];
     [lblTitle setFont:[UIFont boldSystemFontOfSize:25.0]];
     [lblTitle setTextAlignment:NSTextAlignmentCenter];
     [lblTitle setTextColor:[UIColor whiteColor]];
@@ -122,7 +122,7 @@
             cell.textLable.text = title;
         }
     } else {
-        cell.iconImage.image = [UIImage imageNamed:@"example"];
+        cell.iconImage.image = [UIImage imageNamed:@"yourtion"];
         cell.textLable.text = @"Unknow";
     }
 }
