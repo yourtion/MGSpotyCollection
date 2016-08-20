@@ -25,4 +25,14 @@ github "yourtion/MGSpotyCollection"
 
 ## How to use
 
-see Deom Project
+See Deom Project
+
+## ScreenShot 
+
+![](ScreenShot/1.png)
+
+![](ScreenShot/2.png)
+
+![](ScreenShot/3.png)
+
+[More ScreenShot](ScreenShot/List.md)
