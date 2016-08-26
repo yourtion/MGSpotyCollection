@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB28982D1D507F3E005D9E6A /* MGSpotyCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */; };
-		CB28982F1D507F42005D9E6A /* MGSpotyCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6BEF051C4DFF8300020AA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF041C4DFF8300020AA1 /* main.m */; };
 		CB6BEF081C4DFF8300020AA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF071C4DFF8300020AA1 /* AppDelegate.m */; };
 		CB6BEF101C4DFF8300020AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF0F1C4DFF8300020AA1 /* Assets.xcassets */; };
 		CB6BEF131C4DFF8300020AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6BEF111C4DFF8300020AA1 /* LaunchScreen.storyboard */; };
 		CB6BEF3E1C4E05EF00020AA1 /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */; };
+		CB79FF611D70015500971FC3 /* MGSpotyCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB79FF5E1D70015200971FC3 /* MGSpotyCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CB28982F1D507F42005D9E6A /* MGSpotyCollection.framework in Embed Frameworks */,
+				CB79FF611D70015500971FC3 /* MGSpotyCollection.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +30,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSpotyCollection.framework; path = "../../../Library/Developer/Xcode/DerivedData/MGSpotyCollection-fhjelkeebdzgivgfzmauopuvaytg/Build/Products/Debug-iphonesimulator/MGSpotyCollection.framework"; sourceTree = "<group>"; };
 		CB6BEF001C4DFF8300020AA1 /* MGSpotyCollectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGSpotyCollectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BEF041C4DFF8300020AA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB6BEF061C4DFF8300020AA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +39,7 @@
 		CB6BEF141C4DFF8300020AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6BEF3C1C4E05EF00020AA1 /* MGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGViewController.h; sourceTree = "<group>"; };
 		CB6BEF3D1C4E05EF00020AA1 /* MGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGViewController.m; sourceTree = "<group>"; };
+		CB79FF5E1D70015200971FC3 /* MGSpotyCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSpotyCollection.framework; path = "../../../Library/Developer/Xcode/DerivedData/MGSpotyCollection-fhjelkeebdzgivgfzmauopuvaytg/Build/Products/Debug-iphoneos/MGSpotyCollection.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB28982D1D507F3E005D9E6A /* MGSpotyCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +56,7 @@
 		CB6BEEF71C4DFF8300020AA1 = {
 			isa = PBXGroup;
 			children = (
-				CB28982C1D507F3E005D9E6A /* MGSpotyCollection.framework */,
+				CB79FF5E1D70015200971FC3 /* MGSpotyCollection.framework */,
 				CB6BEF021C4DFF8300020AA1 /* MGSpotyCollectionDemo */,
 				CB6BEF011C4DFF8300020AA1 /* Products */,
 			);
